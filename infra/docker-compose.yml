@@ -1,0 +1,32 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./apps/frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./apps/backend
+    ports:
+      - "4000:4000"
+    depends_on:
+      - database
+
+  chatbot:
+    build:
+      context: ./apps/chatbot
+    ports:
+      - "8000:8000"
+  
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database
+    ports:
+      - "5432:5432"

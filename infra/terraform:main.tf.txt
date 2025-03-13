@@ -1,0 +1,13 @@
+# AWS 프로바이더 설정
+provider "aws" {
+  region = "us-west-2"
+}
+
+# EC2 인스턴스 설정
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "ExampleInstance"
+  }
+}
