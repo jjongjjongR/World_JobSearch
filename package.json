@@ -2,7 +2,7 @@
   "name": "World_JobSearch",
   "private": true,
   "worckspaves": [
-    "apps/*", 
+    "apps/*",
     "packages/*",
     "infra/*"
   ],
@@ -16,5 +16,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.6.2"
+  "packageManager": "pnpm@10.6.2",
+  "dependencies": {
+    "next-auth": "^4.24.11"
+  }
 }
